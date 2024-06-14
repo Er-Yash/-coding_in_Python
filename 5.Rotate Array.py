@@ -1,3 +1,6 @@
+
+#First approach
+
 class Solution(object):
     def reverse(self,nums,i,j):
       li=i
@@ -23,4 +26,22 @@ class Solution(object):
         :type k: int
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        
+
+
+
+                                #OR
+
+
+# Second Approch
+
+
+def rotate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        k=k%len(nums)
+        if k==0 or k==len(nums):
+          return nums
+        nums[:]=nums[-k:]+nums[:len(nums)-k]
